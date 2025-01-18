@@ -1,10 +1,59 @@
 ---
+import Footer from '../components/Footer.astro';
 import ExperienceLayout from '../layouts/ExperienceLayout.astro';
 ---
 
 <ExperienceLayout>
     <a href="/" class="m-10 hover:bg-[#D5C3C3] hover:text-[#080808]">&lt;- back to home</a>
     <main class="flex flex-col items-center h-screen justify-center font-semibold text-lg">
-        
+        <div class="w-1/2">
+            <h2 class="font-bold text-xl">skills</h2>
+            <ol><li><h3>proficient</h3></li></ol>
+            <ul>
+                <li><p>typescript & javascript (node, bun) + frameworks/libraries (express, discord)</p></li>
+                <li><p>react (& next)</p></li>
+                <li><p>html/css + css libraries (tailwindcss, bootstrap)</p></li>
+                <li><p>C</p></li>
+                <li><p>python</p></li>
+                <li><p>sql</p></li>
+            </ul>
+            <ol start="2"><li><h3>comfortable</h3></li></ol>
+            <ul>
+                <li><p>C#</p></li>
+                <li><p>java</p></li>
+                <li><p>visual basic</p></li>
+            </ul>
+            <ol start="3"><li><h3>learning</h3></li></ol>
+            <ul>
+                <li><p>rust</p></li>
+                <li><p>php</p></li>
+            </ul>
+            <ol start="4"><li><h3>tools & technologies</h3></li></ol>
+            <ul>
+                <li><p>databases: sqlite, postgresql</p></li>
+                <li><p>cloud platforms: supabase, firebase, vercel, cloudflare, azure, digitalocean, netlify</p></li>
+                <li><p>version control: git, github</p></li>
+                <li><p>document preparation: markdown, latex, microsoft office</p></li>
+                <li><p>build tools: cmake, cargo, ninja</p></li>
+                <li><p>continuous integration: github actions</p></li>
+            </ul>
+        </div>
     </main>
+    <Footer />
 </ExperienceLayout>
+
+
+<style>
+    ol {
+        margin-top: 1.5rem;
+        list-style-type: decimal;
+    }
+    ul {
+        padding-left: 0rem;
+        list-style-type: disc;
+        margin-top: 1rem;
+    }
+    h3 {
+        font-weight: 700;
+    }
+</style>
