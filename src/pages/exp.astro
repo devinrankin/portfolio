@@ -5,37 +5,83 @@ import ExperienceLayout from '../layouts/ExperienceLayout.astro';
 
 <ExperienceLayout>
     <a href="/" class="m-10 hover:bg-[#D5C3C3] hover:text-[#080808]">&lt;- back to home</a>
-    <main class="flex flex-col items-center h-screen justify-center font-semibold text-lg">
+    <main class="flex flex-col items-center justify-center font-semibold text-lg">
         <div class="w-1/2">
-            <h2 class="font-bold text-xl">skills</h2>
+            <h2>skills</h2>
             <ol><li><h3>proficient</h3></li></ol>
-            <ul>
-                <li><p>typescript & javascript (node, bun) + frameworks/libraries (express, discord)</p></li>
-                <li><p>react (& next)</p></li>
-                <li><p>html/css + css libraries (tailwindcss, bootstrap)</p></li>
-                <li><p>C</p></li>
-                <li><p>python</p></li>
-                <li><p>sql</p></li>
+            <ul class="list-disc">
+                <li>typescript & javascript (node, bun) + frameworks/libraries (express, discord)</li>
+                <li>react (& next)</li>
+                <li>html/css + css libraries (tailwindcss, bootstrap)</li>
+                <li>C</li>
+                <li>python + (pytorch, panda, anaconda, jupyter)</li>
+                <li>sql</li>
             </ul>
             <ol start="2"><li><h3>comfortable</h3></li></ol>
-            <ul>
-                <li><p>C#</p></li>
-                <li><p>java</p></li>
-                <li><p>visual basic</p></li>
+            <ul class="list-disc">
+                <li>C#</li>
+                <li>java</li>
+                <li>visual basic</li>
             </ul>
             <ol start="3"><li><h3>learning</h3></li></ol>
-            <ul>
-                <li><p>rust</p></li>
-                <li><p>php</p></li>
+            <ul class="list-disc">
+                <li>rust</li>
+                <li>php</li>
             </ul>
             <ol start="4"><li><h3>tools & technologies</h3></li></ol>
-            <ul>
-                <li><p>databases: sqlite, postgresql</p></li>
-                <li><p>cloud platforms: supabase, firebase, vercel, cloudflare, azure, digitalocean, netlify</p></li>
-                <li><p>version control: git, github</p></li>
-                <li><p>document preparation: markdown, latex, microsoft office</p></li>
-                <li><p>build tools: cmake, cargo, ninja</p></li>
-                <li><p>continuous integration: github actions</p></li>
+            <ul class="list-disc">
+                <li>databases: sqlite, postgresql</li>
+                <li>cloud platforms: supabase, firebase, vercel, cloudflare, azure, digitalocean, netlify</li>
+                <li>version control: git, github</li>
+                <li>document preparation: markdown, latex, microsoft office</li>
+                <li>build tools: cmake, cargo, ninja</li>
+                <li>continuous integration: github actions</li>
+            </ul>
+        </div>
+        <div class="w-1/2 mt-16">
+            <h2>experience</h2>
+            <ul class="list-none timeline">
+                <li class="">
+                    <span class="">feb. 2024 - present</span>
+                    <a href="https://owlhacks.com" class="hover:bg-foreground hover:text-background">owlhacks lead developer</a>
+                </li>
+                <li>
+                    <span class="">may. 2023 - jul. 2023</span>
+                    <a href="https://coventry.com" class="hover:bg-foreground hover:text-background">software eng. intern at coventry</a>
+                </li>
+                <li>
+                    <span class="">aug. 2023 - may. 2024</span>
+                    CS peer tutor & TA for low-level sys. programming
+                </li>
+                <li>
+                    <span class="">jan. 2023 - may. 2023</span>
+                    TA for program design and abstraction (intro to java)
+                </li>
+            </ul>
+        </div>
+        <div class="w-1/2 mt-16">
+            <h2>projects</h2>
+            <ul class="list-none project-list">
+                <li class="">
+                    <span>
+                        <a href="https://github.com/CIS-3207-F22/project-2-linux-shell-devinrankin/" class="hover:text-background hover:bg-foreground">shell</a>
+                    </span>
+                    developed a unix shell clone in C; implemented internal commands like 'cd', 'help', 'echo', etc.</a>
+                </li>
+                <li>
+                    <span class="">
+                        <a href="https://github.com/InquiryEDU" class="hover:bg-foreground hover:text-background">inquiry (defunct)</a></span>
+                    hackathon project. inquiry is a multi-platform real-time messaging and reaction app for students to ask questions without the fear of public opinion. uses typescript, next, electron, and supabase.
+                </li>
+                <li>
+                    <span class="">
+                        <a href="https://devinrank.in" class="hover:bg-foreground hover:text-background">portfolio</a></span>
+                    my former portfolio site; uses typescript, next, framer motion, and tailwind.
+                </li>
+                <li>
+                    <span class="">capturegate</span>
+                    WIP...
+                </li>
             </ul>
         </div>
     </main>
@@ -50,10 +96,36 @@ import ExperienceLayout from '../layouts/ExperienceLayout.astro';
     }
     ul {
         padding-left: 0rem;
-        list-style-type: disc;
         margin-top: 1rem;
+    }
+    h2 {
+        font-weight: 700;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
     }
     h3 {
         font-weight: 700;
+    }
+
+    .timeline {
+        list-style: none;
+    }
+
+    .timeline li {
+        display: grid;
+        grid-template-columns: 20rem 1fr;
+        gap: 1rem;
+        padding: 0.5rem 0;
+    }
+
+    .project-list {
+        list-style: none;
+    }
+
+    .project-list li {
+        display: grid;
+        grid-template-columns: 20rem 1fr;
+        gap: 1rem;
+        padding: 0.5rem 0;
     }
 </style>
