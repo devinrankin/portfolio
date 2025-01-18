@@ -8,3 +8,13 @@
 html {
     font-family: "Fira Code", system-ui, -apple-system, Roboto, sans-serif;
 }
+
+::selection {
+    background: #D5C3C3;
+    color: #080808;
+}
+
+::-moz-selection {
+    background: #D5C3C3;
+    color: #080808;
+}
