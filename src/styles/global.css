@@ -5,16 +5,18 @@
     font-style: normal;
 }
 
-html {
+* {
     font-family: "Fira Code", system-ui, -apple-system, Roboto, sans-serif;
+    --background: #080808;
+    --foreground: #D5C3C3
 }
 
 ::selection {
-    background: #D5C3C3;
-    color: #080808;
+    background: var(--foreground);
+    color: var(--background);
 }
 
 ::-moz-selection {
-    background: #D5C3C3;
-    color: #080808;
+    background: var(--foreground);
+    color: var(--background);
 }
