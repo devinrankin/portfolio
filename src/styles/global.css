@@ -1,13 +1,11 @@
-@font-face {
-    font-family: "Fira Code";
-    src: url("/fonts/FiraCode-VF.woff2") format("woff2");
-    font-weight: 300 700;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 * {
-    font-family: "Fira Code", system-ui, -apple-system, Roboto, sans-serif;
+    font-family: "JetBrains Mono", monospace, system-ui, -apple-system, Roboto, sans-serif;
+    font-size: 1.1rem;
+    font-variant-ligatures: normal;
     --background: #080808;
+    font-optical-sizing: auto;
     --foreground: #D5C3C3
 }
 

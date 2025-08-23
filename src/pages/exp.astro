@@ -4,128 +4,130 @@ import ExperienceLayout from '../layouts/ExperienceLayout.astro';
 ---
 
 <ExperienceLayout>
-    <a href="/" class="m-10 hover:bg-foreground hover:text-background">&lt;- back to home</a>
-    <main class="flex flex-col items-center justify-center font-semibold text-lg">
-        <div class="w-1/2">
-            <h2>skills</h2>
-            <ol><li><h3>proficient</h3></li></ol>
-            <ul class="list-disc">
-                <li>C / C++</li>
-                <li>typescript</li>
-                <li>python</li>
-            </ul>
-            <ol start="2"><li><h3>comfortable</h3></li></ol>
-            <ul class="list-disc">
-                <li>C#</li>
-                <li>java</li>
-                <li>visual basic</li>
-            </ul>
-            <ol start="3"><li><h3>learning</h3></li></ol>
-            <ul class="list-disc">
-                <li>rust</li>
-            </ul>
-            <ol start="4"><li><h3>tools & technologies</h3></li></ol>
-            <ul class="list-disc">
-                <li>virtualization: docker, virtualbox
-                <li>continuous integration: github actions</li>
-                <li>build tools: cmake, make, cargo, ninja</li>
-                <li>databases: sqlite, postgresql</li>
-                <li>version control: git, github</li>
-                <li>cloud platforms: supabase, cloudflare, azure, digitalocean</li>
-                <li>documentation: markdown, latex, microsoft office</li>
-            </ul>
-        </div>
-        <div class="w-1/2 mt-16">
-            <h2>experience</h2>
-            <ul class="list-none timeline">
-                <li class="">
-                    <span class="">feb. 2024 - present</span>
-                    <a href="https://owlhacks.com" class="hover:bg-foreground hover:text-background">owlhacks lead developer</a>
-                </li>
-                <li>
-                    <span class="">aug. 2023 - may. 2024</span>
-                    CS peer tutor & TA for low-level sys. programming
-                </li>
-                <li>
-                    <span class="">may. 2023 - jul. 2023</span>
-                    <a href="https://coventry.com" class="hover:bg-foreground hover:text-background">software eng. intern at coventry</a>
-                </li>
-                <li>
-                    <span class="">jan. 2023 - may. 2023</span>
-                    TA for program design and abstraction (intro to java)
-                </li>
-            </ul>
-        </div>
-        <div class="w-1/2 mt-16">
-            <h2>projects</h2>
-            <ul class="list-none project-list">
-                <li class="">
-                    <span>
-                        <a href="https://github.com/CIS-3207-F22/project-2-linux-shell-devinrankin/" class="hover:text-background hover:bg-foreground" target="_blank">shell</a>
-                    </span>
-                    developed a unix shell clone in C; implemented internal commands like 'cd', 'help', 'echo', etc.</a>
-                </li>
-                <li>
-                    <span>
-                        <a href="https://github.com/devinrankin/c8-emu" class="hover:text-background hover:bg-foreground" target="_blank">chip-8 emulator</a>
-                    </span>
-                    a simple chip-8 emulator written in c++. pretty much a beginner emulation project.
-                </li>
-                <li>
-                    <span>
-                        <a href="https://github.com/devinrankin/gbc-emu" class="hover:text-background hover:bg-foreground" target="_blank">gameboy color emulator</a>
-                    </span>
-                    a follow up emulation project that i'm currently working on. also written in c++.
-                </li>
-                <li>
-                    <span class="">
-                        <a href="https://github.com/InquiryEDU" class="hover:bg-foreground hover:text-background" target="_blank">inquiry</a></span>
-                    hackathon project. inquiry is a multi-platform real-time messaging and reaction app for students to ask questions without the fear of public opinion. uses typescript, next, electron, and supabase.
-                </li>
-            </ul>
-        </div>
-    </main>
-    <Footer />
+    <h2 class="font-black mt-16"># Experience</h2>
+    <ul class="mt-8 space-y-10 lg:w-3/4 experience">
+       <li>
+            <span>Feb. 2024 - Present</span>
+            <h3>
+                <a href="https://owlhacks.com" class="hover:bg-foreground hover:text-background">
+                    Owlhacks Lead Developer
+                </a>
+            </h3>
+        </li>
+        <li>
+            <span>Aug. 2023 - May. 2024</span>
+            <h3>
+                CS Peer Tutor & Operating Systems Teaching Assistant
+            </h3>
+        </li>
+        <li>
+            <span>May. 2023 - Jul. 2023</span>
+            <h3>
+                <a href="https://coventry.com" class="hover:bg-foreground hover:text-background">
+                    Software Eng. Intern @ Coventry Life Settlements
+                </a>
+            </h3>
+        </li>
+        <li>
+            <span>Jan. 2023 - May. 2023</span>
+            <h3>
+                Program Design & Abstraction Teaching Assistant
+            </h3>
+        </li> 
+    </ul>
+
+    <h2 class="font-black mt-16"># Projects</h2>
+    <ul class="mt-8 space-y-10 w-3/4 experience">
+        <li>
+            <h3>
+                <a href="https://github.com/CIS-3207-F22/project-2-linux-shell-devinrankin/" class="hover:text-background hover:bg-foreground" target="_blank">Shell</a>
+            </h3>
+            Developed a UNIX shell clone in C; implemented internal commands like 'cd', 'help', 'echo', etc.</a>
+        </li>
+        <li>
+            <h3>
+                <a href="https://github.com/devinrankin/c8-emu" class="hover:text-background hover:bg-foreground" target="_blank">CHIP-8 Emulator</a>
+            </h3>
+            <span>
+                A simple CHIP-8 emulator written in <span class="whitespace-nowrap">C++</span>. Pretty much a beginner emulation project.
+            <span>
+        </li>
+        <li>
+            <h3>
+                <a href="https://github.com/devinrankin/gbc-emu" class="hover:text-background hover:bg-foreground" target="_blank">Game Boy Color Emulator</a>
+            </h3>
+            <span>
+                A follow up emulation project that i'm currently working on. Also written in <span class="whitespace-nowrap">C++</span>.
+            </span>
+        </li>
+        <li>
+            <h3>
+                <a href="https://github.com/InquiryEDU" class="hover:bg-foreground hover:text-background" target="_blank">Inquiry</a>
+            </h3>
+            <span>
+                Hackathon project. Inquiry is a multi-platform real-time messaging and reaction app for students to ask questions without the fear of public opinion. Uses Typescript, Next, Electron, and Supabase.
+            </span>
+        </li>
+    </ul>
+
+        <h2 class="font-black mt-16"># Skills</h2>
+        <h3>## Proficient</h3>
+        <ul>
+            <li><span class="list-style">-</span> C / C++</li>
+            <li><span class="list-style">-</span> Typescript: React, Next, Vue, Svelte, Three, Express, Bun</li>
+            <li><span class="list-style">-</span> Python</li>
+        </ul>
+        <h3 class="font-bold">## Comfortable</h3>
+        <ul class="list-[-]">
+            <li><span class="list-style">-</span> Rust</li>
+            <li><span class="list-style">-</span> ASM: MIPS, x86, GBZ80, 6502</li>
+            <li><span class="list-style">-</span> C#</li>
+            <li><span class="list-style">-</span> Java</li>
+        </ul>
+        <h3 class="font-bold">## Tools & Technologies I Use Frequently</h3>
+        <ul class="list-[-]">
+            <li>
+                <span class="list-style">-</span> Virtualization: Docker, VMWare
+            </li>
+            <li>
+                <span class="list-style">-</span> Version Control: Git
+            </li>
+            <li>
+                <span class="list-style">-</span> Build Tools: GNU Make, CMake, Cargo, Ninja, npm
+            </li>
+            <li>
+                <span class="list-style">-</span> Databases: SQL, SQLite, PostGreSQL
+            </li>
+            <li>
+                <span class="list-style">-</span> Game Engines: Godot
+            </li>
+            <li>
+                <span class="list-style">-</span> Editors: Vim, NeoVim, Visual Studio
+            </li>
+            <li>
+                <span class="list-style">-</span> Typesetters: Markdown, Typst, LaTeX
+        </ul>
 </ExperienceLayout>
 
-
 <style>
-    ol {
-        margin-top: 1.5rem;
-        list-style-type: decimal;
-    }
-    ul {
-        padding-left: 0rem;
-        margin-top: 1rem;
-    }
-    h2 {
-        font-weight: 700;
-        font-size: 1.25rem;
-        line-height: 1.75rem;
-    }
     h3 {
-        font-weight: 700;
+        text-decoration: underline;
+    }
+    li {
+        margin: 0 2rem 0 2rem;
     }
 
-    .timeline {
-        list-style: none;
+    .list-style {
+        opacity: 70%;
     }
 
-    .timeline li {
-        display: grid;
-        grid-template-columns: 20rem 1fr;
-        gap: 1rem;
-        padding: 0.5rem 0;
-    }
-
-    .project-list {
-        list-style: none;
-    }
-
-    .project-list li {
-        display: grid;
-        grid-template-columns: 20rem 1fr;
-        gap: 1rem;
-        padding: 0.5rem 0;
+    @media (min-width: 768px) {
+        .experience li {
+            display: grid;
+            grid-template-columns: 25rem 1fr;
+        }
+        h3 {
+            text-decoration: none;
+        }
     }
 </style>

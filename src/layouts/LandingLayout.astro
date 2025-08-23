@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -9,10 +10,12 @@ import "../styles/global.css";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="icons/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>[Devin]://[me]</title>
+		<title>[Devin]://[src]</title>
 	</head>
-	<body class="text-foreground text-lg font-semibold">
-		<slot />
+	<body class="text-foreground text-lg">
+		<main class="flex flex-col items-center justify-center space-y-10 h-screen tracking-wider overflow-x-hidden mx-4">
+			<slot />
+		</main>
 	</body>
 </html>
 
