@@ -1,15 +1,4 @@
-# 👋👋👋
-Updated portfolio site I'm working on.
-
-## Technology I plan to use:
-
-### **Frontend**
+I don't care about web development so I used:
 - html/css
 - astro
 - bun
-
-### **Backend**
-- rust
-    - axum (maybe?)
-    - serde
-- sqlite
