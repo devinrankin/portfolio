@@ -70,6 +70,10 @@
     font-display: swap;
 }
 
+body {
+    padding: 1rem; 
+}
+
 * {
     font-family: "JetBrains Mono";
     font-size: 1rem;
@@ -85,6 +89,16 @@
     text-underline-offset: 4px;
     background: var(--background);
     color: var(--foreground);
+}
+
+a {
+    text-decoration: underline;
+}
+
+a:hover {
+    background: var(--foreground);
+    color: var(--background);
+    text-decoration: none;
 }
 
 ::selection {

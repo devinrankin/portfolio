@@ -7,48 +7,23 @@ import Image from "astro/components/Image.astro";
 <BaseLayout title="devin/home">
 	<!-- Introduction -->
 	<section class="flex space-x-4 py-4">
-		<Image
-			src={girl}
-			alt="Anime girl."
-			width={150}
-			class="object-contain"
-		/>
+		<Image src={girl} alt="Anime girl." width={150} class="object-contain" />
 		<div class="sm:p-4 sm:space-y-2">
 			<h1 class="">Hi, I'm Devin.</h1>
 			<p class="">check out my:</p>
-			<div
-				class="sm:flex sm:space-x-5 grid grid-cols-2 gap-3 underline"
-			>
-				<a
-					href="mailto:devinrankin@proton.me"
-					target="_blank"
-					class="hover:bg-foreground hover:text-background">contact</a
+			<div class="sm:flex sm:space-x-5 grid grid-cols-2 gap-3">
+				<a href="mailto:devinrankin@proton.me" target="_blank">contact</a>
+				<a href="https://github.com/devinrankin" target="_blank">github</a>
+				<a href="https://linkedin.com/in/devinrankin0" target="_blank"
+					>linkedin</a
 				>
-				<a
-					href="https://github.com/devinrankin"
-					target="_blank"
-					class="hover:bg-foreground hover:text-background">github</a
+				<a href="https://discord.com/users/295721632079675392" target="_blank"
+					>discord</a
 				>
-				<a
-					href="https://linkedin.com/in/devinrankin0"
-					target="_blank"
-					class="hover:bg-foreground hover:text-background">linkedin</a
-				>
-				<a
-					href="https://discord.com/users/295721632079675392"
-					target="_blank"
-					class="hover:bg-foreground hover:text-background">discord</a
-				>
-				<a
-					href="https://instagram.com/devinrxnkin"
-					class="hover:bg-foreground hover:text-background">instagram</a
-				>
+				<a href="https://instagram.com/devinrxnkin">instagram</a>
 			</div>
 			<p>
-				or my blog <a
-					href="/feed"
-					class="underline hover:bg-foreground hover:text-background">here</a
-				>
+				or my blog <a href="/feed">here</a>
 			</p>
 		</div>
 	</section>
@@ -60,7 +35,14 @@ import Image from "astro/components/Image.astro";
 		<!-- Experience section -->
 		<div class="flex-1 border-2 border-foreground p-4">
 			<h2># Experience</h2>
-			<p>! This list is summarized. For more information on my work history, please see <a href="/resume-rankin.pdf" class="underline hover:text-background hover:bg-foreground text-nowrap">my resume</a>.</p>
+			<p>
+				! This list is summarized. For more information on my work history,
+				please see <a
+					href="/resume-rankin.pdf"
+					class="underline hover:text-background hover:bg-foreground text-nowrap"
+					>my resume</a
+				>.
+			</p>
 			<ul class="mt-8 ml-2 space-y-4 list-disc">
 				<li>
 					<span class="text-[#ac9e9e] text-sm font-thin"
@@ -69,29 +51,33 @@ import Image from "astro/components/Image.astro";
 					<h3>
 						<a
 							href="https://owlhacks.com"
-							class="hover:bg-foreground hover:text-background underline underline-offset-4"
 						>
 							Lead Developer @ Owlhacks
 						</a>
 					</h3>
 				</li>
 				<li>
-					<span class="text-foreground-dull text-sm font-thin">Aug 2023 - May 2024</span>
+					<span class="text-foreground-dull text-sm font-thin"
+						>Aug 2023 - May 2024</span
+					>
 					<h3>CS Peer Tutor & Operating Systems Teaching Assistant</h3>
 				</li>
 				<li>
-					<span class="text-foreground-dull text-sm font-thin">May 2023 - Jul 2023</span>
+					<span class="text-foreground-dull text-sm font-thin"
+						>May 2023 - Jul 2023</span
+					>
 					<h3>
 						<a
 							href="https://coventry.com"
-							class="hover:bg-foreground hover:text-background underline underline-offset-4"
 						>
 							Software Eng. Intern @ Coventry Life Settlements
 						</a>
 					</h3>
 				</li>
 				<li>
-					<span class="text-foreground-dull text-sm font-thin">Jan 2023 - May 2023</span>
+					<span class="text-foreground-dull text-sm font-thin"
+						>Jan 2023 - May 2023</span
+					>
 					<h3>Program Design & Abstraction Teaching Assistant</h3>
 				</li>
 			</ul>
@@ -105,7 +91,6 @@ import Image from "astro/components/Image.astro";
 					<h3>
 						<a
 							href="https://github.com/CIS-3207-F22/project-2-linux-shell-devinrankin/"
-							class="hover:text-background hover:bg-foreground underline underline-offset-4"
 							target="_blank">Shell</a
 						>
 					</h3>
@@ -115,7 +100,6 @@ import Image from "astro/components/Image.astro";
 					<h3>
 						<a
 							href="https://github.com/devinrankin/c8-emu"
-							class="hover:text-background hover:bg-foreground underline underline-offset-4"
 							target="_blank">c8-emu</a
 						>
 					</h3>
@@ -128,7 +112,6 @@ import Image from "astro/components/Image.astro";
 						<h3>
 							<a
 								href="https://github.com/devinrankin/gbc-emu"
-								class="hover:text-background hover:bg-foreground underline underline-offset-4"
 								target="_blank">gbCPP</a
 							>
 						</h3>
@@ -142,7 +125,6 @@ import Image from "astro/components/Image.astro";
 						<h3>
 							<a
 								href="https://www.youtube.com/watch?v=iiHYFNoYW9U"
-								class="hover:bg-foreground hover:text-background underline underline-offset-4"
 								target="_blank">Inquiry</a
 							>
 						</h3>
@@ -160,7 +142,11 @@ import Image from "astro/components/Image.astro";
 	</section>
 
 	<!-- Quote -->
-	<section class="border-2 border-foreground p-4 flex items-center justify-center">
-		<p>「向日葵。真夏に咲き誇る地上の太陽、それはまるで永遠に照り続けるかのように。けれど、場気な向日葵も夏が終われば枯れていく・・・」</p>
+	<section
+		class="border-2 border-foreground p-4 flex items-center justify-center"
+	>
+		<p>
+			「向日葵。真夏に咲き誇る地上の太陽、それはまるで永遠に照り続けるかのように。けれど、場気な向日葵も夏が終われば枯れていく・・・」
+		</p>
 	</section>
 </BaseLayout>
