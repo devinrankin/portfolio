@@ -1,11 +1,12 @@
 ---
-import LandingLayout from "../layouts/LandingLayout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import girl from "../assets/images/girl.jpg";
 import Image from "astro/components/Image.astro";
 ---
 
-<LandingLayout>
-	<div class="flex space-x-4 py-4">
+<BaseLayout title="devin/home">
+	<!-- Introduction -->
+	<section class="flex space-x-4 py-4">
 		<Image
 			src={girl}
 			alt="Anime girl."
@@ -45,14 +46,18 @@ import Image from "astro/components/Image.astro";
 			</div>
 			<p>
 				or my blog <a
-					href="/blog"
+					href="/feed"
 					class="underline hover:bg-foreground hover:text-background">here</a
 				>
 			</p>
 		</div>
-	</div>
+	</section>
+
 	<hr class="text-foreground border-t-2 border-foreground" />
-	<article class="flex justify-between md:flex-row flex-col">
+
+	<!-- Experience & projects -->
+	<section class="flex justify-between md:flex-row flex-col">
+		<!-- Experience section -->
 		<div class="flex-1 border-2 border-foreground p-4">
 			<h2># Experience</h2>
 			<p>! This list is summarized. For more information on my work history, please see <a href="/resume-rankin.pdf" class="underline hover:text-background hover:bg-foreground text-nowrap">my resume</a>.</p>
@@ -91,6 +96,7 @@ import Image from "astro/components/Image.astro";
 				</li>
 			</ul>
 		</div>
+		<!-- Projects section -->
 		<div class="flex-1 border-2 border-foreground p-4">
 			<h2># Projects</h2>
 			<p>! Click on the project title to visit their respective repository.</p>
@@ -151,8 +157,10 @@ import Image from "astro/components/Image.astro";
 				</li>
 			</ul>
 		</div>
-	</article>
-	<div class="border-2 border-foreground p-4 flex items-center justify-center">
+	</section>
+
+	<!-- Quote -->
+	<section class="border-2 border-foreground p-4 flex items-center justify-center">
 		<p>「向日葵。真夏に咲き誇る地上の太陽、それはまるで永遠に照り続けるかのように。けれど、場気な向日葵も夏が終われば枯れていく・・・」</p>
-	</div>
-</LandingLayout>
+	</section>
+</BaseLayout>
