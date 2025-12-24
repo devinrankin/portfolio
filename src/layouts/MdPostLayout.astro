@@ -5,7 +5,7 @@ import type { CollectionEntry } from "astro:content";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, date, tags, id } = Astro.props;
+const { title, description, date, tags, slug } = Astro.props;
 ---
 
 <!doctype html>
@@ -15,7 +15,10 @@ const { title, description, date, tags, id } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="icons/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <title>devin/blog/{id}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={tags} />
+    <meta name="author" content="Devin Rankin" />
+    <title>devin/blog/{slug}</title>
   </head>
   <body>
     <nav><a href="/feed">&lt;-- back</a></nav>

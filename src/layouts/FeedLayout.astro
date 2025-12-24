@@ -1,6 +1,13 @@
 ---
 import "../styles/global.css";
 import BackButton from "../components/BackButton.astro";
+import { type CollectionEntry, getCollection } from "astro:content";
+
+interface Props {
+	keywords: string;
+}
+
+const { keywords } = Astro.props;
 ---
 
 <!doctype html>
@@ -10,6 +17,9 @@ import BackButton from "../components/BackButton.astro";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="icons/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="Devin Rankin's blog covering various topics including programming, learning Japanese, video games, visual novels, and anime." />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="Devin Rankin" />
 		<title>devin/blog</title>
 	</head>
 	<BackButton prevRoute="/" />
