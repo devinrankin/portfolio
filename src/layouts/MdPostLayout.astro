@@ -1,5 +1,6 @@
 ---
 import FormattedDate from "../components/FormattedDate.astro";
+import Tags from "../components/Tags.astro";
 import "../styles/global.css";
 import type { CollectionEntry } from "astro:content";
 
@@ -25,17 +26,7 @@ const { title, description, date, tags, slug } = Astro.props;
     <header class="space-y-1 mt-8">
       <FormattedDate date={date} />
       <p>{title}</p>
-      <div class="text-xs text-foreground-dull flex">
-        #: &lbrack;
-        {
-          tags.map((tag: string, index: number) => (
-            <span class="text-xs text-foreground-dull">
-              {(index ? ", " : "") + tag}
-            </span>
-          ))
-        }
-        &rbrack;
-      </div>
+      <Tags tags={tags} />
       <p class="text-sm">{description}</p>
     </header>
 
