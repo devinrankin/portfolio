@@ -1,0 +1,11 @@
+---
+interface Props {
+  prevRoute: string;
+}
+
+const { prevRoute } = Astro.props;
+---
+
+<nav>
+  <a href={prevRoute}>&lt;-- back</a>
+</nav>

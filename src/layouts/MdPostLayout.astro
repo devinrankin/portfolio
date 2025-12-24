@@ -18,7 +18,8 @@ const { title, description, date, tags, id } = Astro.props;
     <title>devin/blog/{id}</title>
   </head>
   <body>
-    <header class="space-y-1">
+    <nav><a href="/feed">&lt;-- back</a></nav>
+    <header class="space-y-1 mt-8">
       <FormattedDate date={date} />
       <p>{title}</p>
       <div class="text-xs text-foreground-dull flex">
