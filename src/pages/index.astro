@@ -1,17 +1,158 @@
 ---
-import LandingLayout from '../layouts/LandingLayout.astro';
+import LandingLayout from "../layouts/LandingLayout.astro";
+import girl from "../assets/images/girl.jpg";
+import Image from "astro/components/Image.astro";
 ---
 
 <LandingLayout>
-	<h1 class="font-black">Hi, I'm <span class="tracking-[0.5em] hover:bg-[#D5C3C3] hover:text-[#080808]">[devin]</span>.</h1>
-	<div class="space-x-5 font-semibold">
-		<a href="https://github.com/devinrankin" target="_blank" class="hover:bg-foreground hover:text-background">github</a>
-		<a href="https://linkedin.com/in/devinrankin0" target="_blank" class="hover:bg-foreground hover:text-background">linkedin</a>
-		<a href="https://discord.com/users/295721632079675392" target="_blank" class="hover:bg-foreground hover:text-background">discord</a>
+	<div class="flex space-x-4 py-4">
+		<Image
+			src={girl}
+			alt="Anime girl."
+			width={150}
+			class="object-contain"
+		/>
+		<div class="sm:p-4 sm:space-y-2">
+			<h1 class="">Hi, I'm Devin.</h1>
+			<p class="">check out my:</p>
+			<div
+				class="sm:flex sm:space-x-5 grid grid-cols-2 gap-3 underline"
+			>
+				<a
+					href="mailto:devinrankin@proton.me"
+					target="_blank"
+					class="hover:bg-foreground hover:text-background">contact</a
+				>
+				<a
+					href="https://github.com/devinrankin"
+					target="_blank"
+					class="hover:bg-foreground hover:text-background">github</a
+				>
+				<a
+					href="https://linkedin.com/in/devinrankin0"
+					target="_blank"
+					class="hover:bg-foreground hover:text-background">linkedin</a
+				>
+				<a
+					href="https://discord.com/users/295721632079675392"
+					target="_blank"
+					class="hover:bg-foreground hover:text-background">discord</a
+				>
+				<a
+					href="https://instagram.com/devinrxnkin"
+					class="hover:bg-foreground hover:text-background">instagram</a
+				>
+			</div>
+			<p>
+				or my blog <a
+					href="/blog"
+					class="underline hover:bg-foreground hover:text-background">here</a
+				>
+			</p>
+		</div>
 	</div>
-	<div class="space-x-5 font-semibold text-center">
-		<a href="mailto:devinrankin@proton.me" target="_blank" class="hover:bg-foreground hover:text-background">contact</a>
-		<a href="/exp" class="hover:bg-foreground hover:text-background">experience</a>
-		<a href="https://instagram.com/devinrxnkin" class="hover:bg-foreground hover:text-background">instagram</a>
+	<hr class="text-foreground border-t-2 border-foreground" />
+	<article class="flex justify-between md:flex-row flex-col">
+		<div class="flex-1 border-2 border-foreground p-4">
+			<h2># Experience</h2>
+			<p>! This list is summarized. For more information on my work history, please see <a href="/resume-rankin.pdf" class="underline hover:text-background hover:bg-foreground text-nowrap">my resume</a>.</p>
+			<ul class="mt-8 ml-2 space-y-4 list-disc">
+				<li>
+					<span class="text-[#ac9e9e] text-sm font-thin"
+						>Feb 2024 - Present</span
+					>
+					<h3>
+						<a
+							href="https://owlhacks.com"
+							class="hover:bg-foreground hover:text-background underline underline-offset-4"
+						>
+							Lead Developer @ Owlhacks
+						</a>
+					</h3>
+				</li>
+				<li>
+					<span class="text-foreground-dull text-sm font-thin">Aug 2023 - May 2024</span>
+					<h3>CS Peer Tutor & Operating Systems Teaching Assistant</h3>
+				</li>
+				<li>
+					<span class="text-foreground-dull text-sm font-thin">May 2023 - Jul 2023</span>
+					<h3>
+						<a
+							href="https://coventry.com"
+							class="hover:bg-foreground hover:text-background underline underline-offset-4"
+						>
+							Software Eng. Intern @ Coventry Life Settlements
+						</a>
+					</h3>
+				</li>
+				<li>
+					<span class="text-foreground-dull text-sm font-thin">Jan 2023 - May 2023</span>
+					<h3>Program Design & Abstraction Teaching Assistant</h3>
+				</li>
+			</ul>
+		</div>
+		<div class="flex-1 border-2 border-foreground p-4">
+			<h2># Projects</h2>
+			<p>! Click on the project title to visit their respective repository.</p>
+			<ul class="mt-8 ml-2 space-y-4 w-3/4 experience list-disc">
+				<li>
+					<h3>
+						<a
+							href="https://github.com/CIS-3207-F22/project-2-linux-shell-devinrankin/"
+							class="hover:text-background hover:bg-foreground underline underline-offset-4"
+							target="_blank">Shell</a
+						>
+					</h3>
+					<p>A UNIX shell clone written in C.</p>
+				</li>
+				<li>
+					<h3>
+						<a
+							href="https://github.com/devinrankin/c8-emu"
+							class="hover:text-background hover:bg-foreground underline underline-offset-4"
+							target="_blank">c8-emu</a
+						>
+					</h3>
+					<p>
+						A CHIP-8 beginner emulator project written in <span
+							class="whitespace-nowrap">C++</span
+						>.
+					</p>
+					<li>
+						<h3>
+							<a
+								href="https://github.com/devinrankin/gbc-emu"
+								class="hover:text-background hover:bg-foreground underline underline-offset-4"
+								target="_blank">gbCPP</a
+							>
+						</h3>
+						<p>
+							A GameBoy Color Emulator written in <span
+								class="whitespace-nowrap">C++</span
+							>. The most fun project I've worked on by far.
+						</p>
+					</li>
+					<li>
+						<h3>
+							<a
+								href="https://www.youtube.com/watch?v=iiHYFNoYW9U"
+								class="hover:bg-foreground hover:text-background underline underline-offset-4"
+								target="_blank">Inquiry</a
+							>
+						</h3>
+						<p>
+							Inquiry, a multi-platform real-time messaging app that a friend
+							and I conceptualized during a hackathon in 2023, is for students
+							to ask questions and show reaction during lectures without the
+							fear of public opinion. Written in Typescript & HTML with React,
+							Electron, and a PostgreSQL backend.
+						</p>
+					</li>
+				</li>
+			</ul>
+		</div>
+	</article>
+	<div class="border-2 border-foreground p-4 flex items-center justify-center">
+		<p>「向日葵。真夏に咲き誇る地上の太陽、それはまるで永遠に照り続けるかのように。けれど、場気な向日葵も夏が終われば枯れていく・・・」</p>
 	</div>
 </LandingLayout>
