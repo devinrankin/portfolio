@@ -6,12 +6,12 @@ interface Props {
 }
 ---
 
-<div class="text-xs text-foreground-dull flex">
-  <p class="text-xs text-foreground-dull">#:</p>&lbrack;
+<div class="text-xs text-foreground-dull flex flex-wrap">
+  <span class="text-xs text-foreground-dull">#:</span>&lbrack;
   {
     tags.map((tag: string, index: number) => (
       <span class="text-xs text-foreground-dull">
-        {(index ? ", " : "") + tag}
+        {tag + ((index + 1) - tags.length == 0 ? "" : ",")}
       </span>
     ))
   }

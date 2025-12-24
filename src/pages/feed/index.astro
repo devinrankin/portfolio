@@ -24,7 +24,7 @@ const uniqueTags = [...tags];
       <ul class="space-y-10">
         {
           posts.map((post) => (
-            <li class="space-y-1 w-1/2">
+            <li class="space-y-1">
               <FormattedDate date={post.data.date} />
               <a href={`/feed/${post.slug}`}>{post.data.title}</a>
               <Tags tags={post.data.tags} />
