@@ -1,0 +1,32 @@
+---
+import BlogFeed from "../../layouts/FeedLayout.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
+import Tags from "../../components/Tags.astro"
+import { type CollectionEntry, getCollection } from "astro:content";
+import { ContentSchemaContainsSlugError } from "astro/dist/core/errors/errors-data";
+
+const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort(
+  (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
+    b.data.date.valueOf() - a.data.date.valueOf(),
+);
+---
+
+<BlogFeed>
+  <main>
+    <h1># Swan Dive into Eternity</h1>
+    <section class="mt-8">
+      <ul class="space-y-10">
+        {
+          posts.map((post) => (
+            <li class="space-y-1 w-1/2">
+              <FormattedDate date={post.data.date} />
+              <a href={`/feed/${post.slug}`}>{post.data.title}</a>
+              <Tags tags={post.data.tags} />
+              <p class="text-sm text-foreground-dull">{post.data.description}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
+</BlogFeed>

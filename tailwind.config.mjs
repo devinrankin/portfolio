@@ -6,6 +6,9 @@ export default {
 			colors: {
 				background: "var(--background)",
 				foreground:  "var(--foreground)",
+				"foreground-dull": "var(--foreground-dull)",
+				literal: "var(--literal)",
+				type: "var(--type)",
 			}
 		},
 	},

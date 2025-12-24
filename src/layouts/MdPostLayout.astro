@@ -1,0 +1,41 @@
+---
+import FormattedDate from "../components/FormattedDate.astro";
+import "../styles/global.css";
+import type { CollectionEntry } from "astro:content";
+
+type Props = CollectionEntry<"blog">["data"];
+
+const { title, description, date, tags, id } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="icons/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>devin/blog/{id}</title>
+  </head>
+  <body>
+    <header class="space-y-1">
+      <FormattedDate date={date} />
+      <p>{title}</p>
+      <div class="text-xs text-foreground-dull flex">
+        #: &lbrack;
+        {
+          tags.map((tag: string, index: number) => (
+            <span class="text-xs text-foreground-dull">
+              {(index ? ", " : "") + tag}
+            </span>
+          ))
+        }
+        &rbrack;
+      </div>
+      <p class="text-sm">{description}</p>
+    </header>
+
+    <hr class="my-4 border-1 border-foreground"/>
+    <slot />
+  </body>
+</html>

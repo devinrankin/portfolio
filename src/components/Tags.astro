@@ -1,0 +1,19 @@
+---
+const { tags } = Astro.props;
+
+interface Props {
+  tags: string[];
+}
+---
+
+<div class="text-xs text-foreground-dull flex">
+  <p class="text-xs text-foreground-dull">#:</p>&lbrack;
+  {
+    tags.map((tag: string, index: number) => (
+      <span class="text-xs text-foreground-dull">
+        {(index ? ", " : "") + tag}
+      </span>
+    ))
+  }
+  &rbrack;
+</div>
