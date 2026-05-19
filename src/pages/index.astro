@@ -25,24 +25,24 @@ import { Image } from "astro:assets";
 		</div>
 	</section>
 
-	<hr class="text-foreground border-t-2 border-foreground" />
+	<hr class="border" />
 
 	<!-- Experience & projects -->
 	<section class="flex justify-between md:flex-row flex-col">
 		<!-- Experience section -->
-		<div class="flex-1 border-2 border-foreground p-4">
+		<div class="flex-1 border-2 p-4">
 			<h2># Experience</h2>
 			<p>
 				! This list is summarized. For more information on my work history,
 				please see <a
 					href="/resume-rankin.pdf"
-					class="underline hover:text-background hover:bg-foreground text-nowrap"
+					class="underline text-nowrap"
 					>my resume</a
 				>.
 			</p>
 			<ul class="mt-8 ml-2 space-y-4 list-disc">
 				<li>
-					<span class="text-[#ac9e9e] text-sm font-thin"
+					<span class="text-foreground-dull text-sm font-thin"
 						>Feb 2024 - Present</span
 					>
 					<h3>
@@ -74,7 +74,7 @@ import { Image } from "astro:assets";
 			</ul>
 		</div>
 		<!-- Projects section -->
-		<div class="flex-1 border-2 border-foreground p-4">
+		<div class="flex-1 border-2 p-4">
 			<h2># Projects</h2>
 			<p>! Click on the project title to visit their respective repository.</p>
 			<ul class="mt-8 ml-2 space-y-4 w-3/4 experience list-disc">
@@ -105,9 +105,7 @@ import { Image } from "astro:assets";
 							>
 						</h3>
 						<p>
-							A Game Boy Color Emulator written in <span
-								class="whitespace-nowrap">C++</span
-							>. The most fun project I've worked on by far.
+							A Game Boy Color Emulator written in C. The most fun project I've worked on by far.
 						</p>
 					</li>
 					<li>
@@ -132,7 +130,7 @@ import { Image } from "astro:assets";
 
 	<!-- Quote -->
 	<section
-		class="border-2 border-foreground p-4 flex items-center justify-center"
+		class="border-2 p-4 flex items-center justify-center"
 	>
 		<p>
 			「向日葵。真夏に咲き誇る地上の太陽、それはまるで永遠に照り続けるかのように。けれど、陽気な向日葵も夏が終われば枯れていく・・・」

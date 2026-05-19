@@ -16,5 +16,7 @@ const { Content } = await render(post);
 ---
 
 <MdPostLayout {...post.data}>
-	<Content />
+	<article class="prose">
+		<Content />
+	</article>
 </MdPostLayout>

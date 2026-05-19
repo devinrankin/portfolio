@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 @font-face {
     font-family: 'JetBrains Mono';
     src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Bold-Italic.woff2') format('woff2'),
@@ -70,43 +72,85 @@
     font-display: swap;
 }
 
-body {
-    padding: 1rem; 
+@theme {
+    --bg-background: #080808;
+    --color-foreground: #DDDDDD;
+    --color-foreground-dull: #BBBBBB;
+    --color-foreground-strong: #4F6D7A;
 }
 
-* {
-    font-family: "JetBrains Mono";
-    font-size: 1rem;
-    font-weight: 600;
-    font-variant-ligatures: normal;
-    --background: #080808;
-    --foreground: #D5C3C3;
-    --foreground-dull: #ac9e9e;
-    --type: #e5c890;
-    --literal: #a6d189;
-    --variable: #ea999c;
-    letter-spacing: 0.05em;
-    text-underline-offset: 4px;
-    background: var(--background);
-    color: var(--foreground);
+@layer base {
+    body {
+        background: var(--bg-background);
+        color: var(--color-foreground);
+        padding: 1rem;
+        font-family: "JetBrains Mono";
+        font-size: 1rem;
+        font-weight: 500;
+        font-variant-ligatures: normal;
+        letter-spacing: 0.05em;
+        text-underline-offset: 4px;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    a:hover {
+        background: var(--color-foreground);
+        color: var(--bg-background);
+        text-decoration: none;
+    }
+
+    ::selection {
+        background: var(--color-foreground);
+        color: var(--bg-background);
+    }
+
+    ::-moz-selection {
+        background: var(--color-foreground);
+        color: var(--bg-background);
+    }
 }
 
-a {
-    text-decoration: underline;
+@layer components {
+    .prose {
+        max-width: 70ch;
+        margin: auto;
+        line-height: 1.8;
+    }
+
+    .prose h1,
+    .prose h2,
+    .prose h3 {
+        line-height: 1.2;
+        margin-top: 1em;
+        font-weight: 800;
+    }   
+
+    .prose h1 {
+        font-size: 1.5rem;
+    }
+
+    .prose h2 {
+        font-size: 1.3rem;
+    }
+
+    .prose h3 {
+        font-size: 1.1rem;
+    }
+
+    .prose p {
+        margin: 1.2em 0;
+    }
+
+    .prose strong {
+        font-weight: 800;
+        color: var(--color-foreground-strong);
+    }
 }
 
-a:hover {
-    background: var(--foreground);
-    color: var(--background);
-    text-decoration: none;
-}
-
-::selection {
-    background: var(--foreground);
-    color: var(--background);
-}
-
-::-moz-selection {
-    background: var(--foreground);
-    color: var(--background);
-}
+/* color history for my own reference:
+    original foreground text color: #D5C3C3
+    new foreground text color:      #DDDDDD
+*/

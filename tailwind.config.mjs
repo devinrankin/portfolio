@@ -1,3 +1,5 @@
+import tailwindcss from "@tailwindcss/vite";
+
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
@@ -7,10 +9,9 @@ export default {
 				background: "var(--background)",
 				foreground:  "var(--foreground)",
 				"foreground-dull": "var(--foreground-dull)",
-				literal: "var(--literal)",
-				type: "var(--type)",
+				"foreground-strong": "var(--foreground-strong)",
 			}
 		},
 	},
-	plugins: [],
+	plugins: [require('@tailwindcss/typography')],
 }

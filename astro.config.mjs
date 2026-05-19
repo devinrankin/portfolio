@@ -1,9 +1,16 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import remarkBreaks from 'remark-breaks';
 
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite';
 
-// https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()]
+  integrations: [],
+  markdown: {
+    remarkPlugins: [remarkBreaks],
+  },
+  vite: {
+    plugins: [tailwindcss()],
+  
+  }
 });
