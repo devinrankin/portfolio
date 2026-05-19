@@ -5,6 +5,7 @@
     "": {
       "name": "portfolio",
       "dependencies": {
+        "@braindb/remark-wiki-link": "^2.1.0",
         "@tailwindcss/vite": "^4.3.0",
         "astro": "^5.16.6",
         "remark-breaks": "^4.0.0",
@@ -32,6 +33,12 @@
     "@babel/parser": ["@babel/parser@7.28.5", "", { "dependencies": { "@babel/types": "^7.28.5" }, "bin": "./bin/babel-parser.js" }, "sha512-KKBU1VGYR7ORr3At5HAtUQ+TV3SzRCXmA/8OdDZiLDBIZxVyzXuztPjfLd3BV1PRAQGCMWWSHYhL0F8d5uHBDQ=="],
 
     "@babel/types": ["@babel/types@7.28.5", "", { "dependencies": { "@babel/helper-string-parser": "^7.27.1", "@babel/helper-validator-identifier": "^7.28.5" } }, "sha512-qQ5m48eI/MFLQ5PxQj4PFaprjyCTLI37ElWMmNs0K8Lk3dVeOdNpB3ks8jc7yM5CDmVC73eMVk/trk3fgmrUpA=="],
+
+    "@braindb/mdast-util-wiki-link": ["@braindb/mdast-util-wiki-link@0.2.0", "", { "dependencies": { "@types/unist": "^3.0.2", "mdast-util-from-markdown": "^2.0.0", "mdast-util-to-markdown": "^2.1.0" } }, "sha512-R5DRorx8dHFNCXjUDmp9T8uEN2WOBEn0EqL25GPgxZvfqTq99ZnhcHJYzOyQVIfP7qov4lau/gDYk617e8p2JA=="],
+
+    "@braindb/micromark-extension-wiki-link": ["@braindb/micromark-extension-wiki-link@0.1.0", "", { "dependencies": { "micromark-util-types": "^2.0.0" } }, "sha512-bYGjvy/Yciisqty7zkC16dkg8gE9aWFpHGgYVRF/5H6N744V/fzjWTT/TtVCWgOk+/x+8rQCHRM8lOtobRE4Ow=="],
+
+    "@braindb/remark-wiki-link": ["@braindb/remark-wiki-link@2.1.0", "", { "dependencies": { "@braindb/mdast-util-wiki-link": "^0.2.0", "@braindb/micromark-extension-wiki-link": "^0.1.0" } }, "sha512-+1ft071hNQR1lE62amhZ8cmFmVTuKJGBrwXIlZ1bM8yw0tVDpywEPlBbJZzt3ExtGDq0I+GaHjXFSe83YZLgGA=="],
 
     "@capsizecss/unpack": ["@capsizecss/unpack@3.0.1", "", { "dependencies": { "fontkit": "^2.0.2" } }, "sha512-8XqW8xGn++Eqqbz3e9wKuK7mxryeRjs4LOHLxbh2lwKeSbuNR4NFifDZT4KzvjU6HMOPbiNTsWpniK5EJfTWkg=="],
 
