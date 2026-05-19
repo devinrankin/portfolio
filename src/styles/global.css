@@ -118,6 +118,7 @@
         max-width: 70ch;
         margin: auto;
         line-height: 1.8;
+        white-space: pre-line;
     }
 
     .prose h1,
@@ -140,10 +141,6 @@
         font-size: 1.1rem;
     }
 
-    .prose p {
-        margin: 1.2em 0;
-    }
-
     .prose strong {
         font-weight: 800;
         color: var(--color-foreground-strong);
@@ -151,6 +148,6 @@
 }
 
 /* color history for my own reference:
-    original foreground text color: #D5C3C3
+    old foreground text color: #D5C3C3
     new foreground text color:      #DDDDDD
 */
