@@ -8,7 +8,7 @@ tags:
   - Review
 ---
 ## Preface & Background
-**This [[reviews|review]] will contain spoilers. You have been warned.**
+**This [[reviews|review]] will contain spoilers.**
 [*Kanon*](https://vndb.org/v33) is the first romance visual novel by Key and Jun Maeda's breakout work as a scenario writer and musician. Originally released for Windows 95/98, it is arguably the first and most influential game to coin the term [泣きゲー](https://vndb.org/g596) (lit. "crying game"), alongside future Key releases such as *AIR*, *CLANNAD*, and *Rewrite*. 
 ## Motivations
 I read *Kanon* with the intent of using it as practice reading Japanese. It is the first visual novel (and Japanese written media) I have completed in its native format. It took approximately six months of infrequent reading and many periods of burnout. I meticulously read and attempted to understand every sentence in the game. I completed the game with 612 i+1 sentences recorded, which vastly exceeded my expectations.
@@ -27,6 +27,6 @@ Despite its age, the presentation of *Kanon* is wonderful too. The soundtrack sh
 
 In short, as the emotional climax of *Kanon*, Ayu's route remains one of the main reasons for the game's lasting legacy as a classic 泣きゲー. The game is not without its weaknesses: several routes suffer from uneven pacing and comparatively lackluster dramatic payoffs, but it compensates for these weaknesses through its presentation, the cast's charming chemistry, and the cathartic resolution of the game's 'true route': Ayu's story.
 
-Overall, the game is **enjoyable**.
+**Enjoyable**.
 
 「うぐぅ～・・・」
