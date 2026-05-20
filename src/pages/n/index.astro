@@ -4,8 +4,8 @@ import FormattedDate from "../../components/FormattedDate.astro";
 import Tags from "../../components/Tags.astro"
 import { type CollectionEntry, getCollection } from "astro:content";
 
-const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort(
-  (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
+const posts: CollectionEntry<"notes">[] = (await getCollection("notes")).sort(
+  (a: CollectionEntry<"notes">, b: CollectionEntry<"notes">) =>
     b.data.date.valueOf() - a.data.date.valueOf(),
 );
 
@@ -26,7 +26,7 @@ const uniqueTags = [...tags];
           posts.map((post) => (
             <li class="space-y-1">
               <FormattedDate date={post.data.date} />
-              <a href={`/b/${post.slug}`}>{post.data.title}</a>
+              <a href={`/n/${post.slug}`}>{post.data.title}</a>
               <Tags tags={post.data.tags} />
               <p class="text-sm text-foreground-dull">{post.data.description}</p>
             </li>

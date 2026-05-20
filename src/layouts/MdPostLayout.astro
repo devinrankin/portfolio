@@ -3,8 +3,9 @@ import FormattedDate from "../components/FormattedDate.astro";
 import Tags from "../components/Tags.astro";
 import "../styles/global.css";
 import type { CollectionEntry } from "astro:content";
+import BackButton from "../components/BackButton.astro";
 
-type Props = CollectionEntry<"blog">["data"];
+type Props = CollectionEntry<"notes">["data"];
 
 const { title, description, date, tags, slug } = Astro.props;
 ---
@@ -19,15 +20,14 @@ const { title, description, date, tags, slug } = Astro.props;
     <meta name="description" content={description} />
     <meta name="keywords" content={tags} />
     <meta name="author" content="Devin Rankin" />
-    <title>devin/b/{slug}</title>
+    <title>devin/n/{slug}</title>
   </head>
   <body>
-    <nav><a href="/b">&lt;-- back</a></nav>
+    <BackButton prevRoute="/n" />
     <header class="space-y-1 mt-8">
       <FormattedDate date={date} />
       <p>{title}</p>
       <Tags tags={tags} />
-      <p class="text-sm">{description}</p>
     </header>
 
     <hr class="my-4 border"/>

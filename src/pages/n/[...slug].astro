@@ -4,7 +4,7 @@ import "../../styles/global.css";
 import { getCollection, type CollectionEntry, render } from "astro:content";
 
 export async function getStaticPaths() {
-	const posts: CollectionEntry<"blog">[] = await getCollection("blog");
+	const posts: CollectionEntry<"notes">[] = await getCollection("notes");
 	return posts.map((post) => ({
 		params: { slug: post.slug },
 		props: { post, slug: post.slug }
