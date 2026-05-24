@@ -1,17 +1,55 @@
 ---
+import { createAnimationScope } from "astro:transitions";
 import MdPostLayout from "../../layouts/MdPostLayout.astro";
 import "../../styles/global.css";
 import { getCollection, type CollectionEntry, render } from "astro:content";
 
+
 export async function getStaticPaths() {
 	const posts: CollectionEntry<"notes">[] = await getCollection("notes");
+	
+	const extractedLinks = (md: string): string[] => {
+		const matches = [...md.matchAll(/\[\[(.+?)\]\]/g)];
+		return matches.map((m) => {
+			const inner = m[1];
+			const parts = inner.split("|");
+			const target = parts[0] ?? parts[1];
+
+			return target.trim().toLowerCase().replace(/\s+/g, "-");
+		});
+	}
+
+	const uplinks: Record<string, string[]> = {};
+	for(const post of posts) {
+		uplinks[post.slug] = extractedLinks(post.body);
+	}
+
+	const backlinks: Record<string, string[]> = {};
+	for(const post of posts) {
+		backlinks[post.slug] = [];
+	}
+
+	for(const [from, links] of Object.entries(uplinks)) {
+		for(const to of links) {
+			if(backlinks[to]) {
+				backlinks[to].push(from);
+			}
+		}
+	}
+
 	return posts.map((post) => ({
 		params: { slug: post.slug },
-		props: { post, slug: post.slug }
+		props: { 
+			post, 
+			slug: post.slug, 
+			uplinks: uplinks[post.slug] ?? [], 
+			backlinks: backlinks[post.slug] ?? []
+		}
 	}));
 }
 
-const { post, slug } = Astro.props;
+
+const { post, slug, uplinks, backlinks } = Astro.props;
 const { Content } = await render(post);
 ---
 
@@ -19,4 +57,31 @@ const { Content } = await render(post);
 	<article class="prose">
 		<Content />
 	</article>
+	<hr class="my-4 border" />
+	<section class="prose">
+	{uplinks.length > 0 && (
+		<section>
+			<h2 class="mb-4">Links</h2>
+			<ul class="space-y-2 list-disc">
+				{uplinks.map((uplink) => (
+            		<li>
+              			<a href={uplink}>{uplink}</a>
+            		</li>
+          		))}
+			</ul>
+		</section>
+	)}
+	{backlinks.length > 0 && (
+		<section>
+			<h2 class="mb-4">Backlinks</h2>
+			<ul class="space-y-2 list-disc">
+				{backlinks.map((backlink) => (
+            		<li>
+              			<a href={backlink}>{backlink}</a>
+            		</li>
+          		))}
+			</ul>
+		</section>
+	)}
+	</section>
 </MdPostLayout>
