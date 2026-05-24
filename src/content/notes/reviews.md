@@ -6,6 +6,3 @@ tags:
   - Review
 ---
 Maybe I'll change my mind in the future, but I don't believe rating things is fair and coming up with arbitrary scores is really exhausting for me, so my scoring system is simple: **enjoyable** and **not enjoyable**.
-
-Below you can find uplinks to media I have written a review for:
-(WIP)
