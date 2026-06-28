@@ -1,4 +1,4 @@
-I don't care about web development so I used:
+Tech used:
 - html/css
 - astro
 - bun
